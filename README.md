@@ -26,4 +26,4 @@ License:
 
 URL:
 ----
-- Live Demo of Webpage: https://ngzhili.github.io/carro-image-annotator-test
+- Live Demo of Webpage: https://ngzhili.github.io/carro-image-annotator-test/
