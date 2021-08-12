@@ -84,14 +84,15 @@ function clear_canvas(){
     complete = false;
     document.getElementById('coordinates').value = '';
     start();
-    document.getElementById("front_bumper").innerHTML = "front_bumper";
-    document.getElementById("front_bonnet").innerHTML = " front_bonnet";
-    document.getElementById("front_right_headlight").innerHTML = "front_right_headlight";
-    document.getElementById("front_right_side_mirror").innerHTML = "front_right_side_mirror";
-    document.getElementById("front_left_headlight").innerHTML = "front_left_headlight";
-    document.getElementById("front_left_side_mirror").innerHTML = "front_left_side_mirror";
-    document.getElementById("car_license_plate").innerHTML = "car_license_plate";
-
+    
+    document.getElementById("front bumper").innerHTML = "front_bumper";
+    document.getElementById("front bonnet").innerHTML = " front_bonnet";
+    document.getElementById("front right headlight").innerHTML = "front_right_headlight";
+    document.getElementById("front right side mirror").innerHTML = "front_right_side_mirror";
+    document.getElementById("front left headlight").innerHTML = "front_left_headlight";
+    document.getElementById("front left side mirror").innerHTML = "front_left_side_mirror";
+    document.getElementById("car license plate").innerHTML = "car_license_plate";
+    
 }
 
 
@@ -102,6 +103,7 @@ function draw(end){
     var select = document.getElementById("cat");
     var result = select.options[select.selectedIndex].text;
     result_global = result
+
     /*alert(result);*/
     if (result == "car_license_plate"){
         colour = 'rgba(0, 255, 0, 0.5)'
@@ -228,26 +230,29 @@ function point_it(event) {
 
         var select = document.getElementById("cat");
         var result = select.options[select.selectedIndex].text;
+
+
         if (result == "front_bumper"){
-            document.getElementById("front_bumper").innerHTML = "front_bumper (Complete)";
+            document.getElementById("front bumper").textContent = "front_bumper (Complete)";
+            
         }    
         if (result == "front_bonnet"){
-            document.getElementById("front_bonnet").innerHTML = " front_bonnet (Complete)";
+            document.getElementById("front bonnet").innerHTML = "front_bonnet (Complete)";
         } 
         if (result == "front_right_headlight"){
-            document.getElementById("front_right_headlight").innerHTML = "front_right_headlight (Complete)";
+            document.getElementById("front right headlight").innerHTML = "front_right_headlight (Complete)";
         } 
         if (result == "front_right_side_mirror"){
-            document.getElementById("front_right_side_mirror").innerHTML = "front_right_side_mirror (Complete)";
+            document.getElementById("front right side mirror").innerHTML = "front_right_side_mirror (Complete)";
         } 
         if (result == "front_left_headlight"){
-            document.getElementById("front_left_headlight").innerHTML = "front_left_headlight (Complete)";
+            document.getElementById("front left headlight").innerHTML = "front_left_headlight (Complete)";
         } 
         if (result == "front_left_side_mirror"){
-            document.getElementById("front_left_side_mirror").innerHTML = "front_left_side_mirror (Complete)";
+            document.getElementById("front left side mirror").innerHTML = "front_left_side_mirror (Complete)";
         }   
         if (result == "car_license_plate"){
-            document.getElementById("car_license_plate").innerHTML = "car_license_plate (Complete)";
+            document.getElementById("car license plate").innerHTML = "car_license_plate (Complete)";
         }     
 
 	event.preventDefault();
@@ -321,3 +326,4 @@ function othername() {
 
     }
 }
+

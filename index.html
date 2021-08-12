@@ -11,122 +11,174 @@
         <meta name="description" content="An example using jPolygon">
         <meta name="keywords" content="HTML,CSS,JavaScript,jPolygon">
         <meta name="author" content="Matteo Mattei and Zhili">
-    </head>
 
+
+    </head>
+    
     
         <span><img alt="" src="https://carro.sg/static/img/carro_logo_v2.svg" style="width: 400px; height: 100px;" class="center"></span>
         <hr size="8" width="100%" color="orange"> 
     
-    <h1>    
+    <h1 style="color:orangered;">    
         Image Annotation Selection Test
     </h1>
+
     <p>Please enter your name and press submit</p>
     <h2> 
         <form id="form" onsubmit="return false;">
             
-            <label for="fname">Enter Your Name:</label>
+            <label for="fname">Enter Your Full Name:</label>
             <input  type="text" id="userInput" />
             <input  type="submit" onclick="othername();" />
         </form>
 
     </h2>
-    <h2>
+
+    <!--<h2> 
+        <form id="form" onsubmit="return false;">
+            
+            <label for="fname">Enter your age (Insert Number only):</label>
+            <input  type="text" id="userInput" />
+            <input  type="submit" onclick="otherage();" />
+        </form>
+
+    </h2>
+    <h2> 
+        <form id="form" onsubmit="return false;">
+            
+            <label for="fname">Enter your email:</label>
+            <input  type="text" id="userInput" />
+            <input  type="submit" onclick="otheremail();" />
+        </form>
+
+    </h2>-->
+    <hr size="8" width="100%" color="orange"> 
+ 
+    <h2 style="color:orangered;">
         Instructions:
     </h2>
     <p>
         <ol >
-            <li>Please enter and submit your name if you have not done so above.</li>
+            <li>Please enter and submit your name if you have not done so above. </li>
+            <i>နာမည်ဖြည့်ပြီး Submit နှိပ်ပါ။</i>
             <li>Your task is to annotate the image correctly using the correct object labels.</li>
-            <li>This is a sample image of how a car front_panel should be annotated. There are a total of 7 objects to be annotated in the front view of the car.</li>
-            <div>
-                <span><img alt="" src="sample_image.jpg"  ></span>
-               <span><img alt="" src="carro_submission.png"  ></span>
+            <i>လုပ်ရမှာက ပုံရဲ့ အရာဝတ္ထု နဲ့ သူနဲ့ သက်ဆိုင်တဲ့ စာနဲ့ အရောင် ကို annotate လုပ်ပေးရမှာပါ။</i>
+            <li>This is a sample image of how a car front_panel should be annotated. There are a total of 7 objects to be annotated in the front view of the car. </li>
+            <i>ဒါက annotate လုပ်ရမယ့် ကားရဲ့ရှေ့မျက်နှာစာ နမူနာပုံ ပါ။ ကားမျက်နှာစာမှာ စုစုပေါင်း annotate လုပ်ရမယ့်  အရာဝတ္ထု ၇ ခုရှိတယ်။</i>
+            <div class="container">
+        
+                <div class="left">
+                    <span><img alt="" src="sample_image.jpg"  ></span>
+                   <span><img alt="" src="carro_submission.png"  ></span>
+                </div>
+                <div class="right"><div>
+                    <br><br>
+        
+                        <svg width="20" height="20">
+                            <rect width="20" height="20" style="fill: rgba(0, 0, 255, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
+                        </svg>
+                        <span id = "front_bumper">front_bumper</span>
+        
+                        <br><br>
+        
+                        <svg width="20" height="20">
+                            <rect width="20" height="20" style="fill: rgba(255, 0, 0, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
+                        </svg>
+                        <span id = "front_bonnet">front_bonnet</span>
+                        
+                        <br><br>
+        
+                        <svg width="20" height="20">
+                            <rect width="20" height="20" style="fill: rgba(255, 0, 255, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
+                        </svg>
+                        <span id = "front_right_headlight">front_right_headlight</span>
+        
+                        <br><br>
+                        <svg width="20" height="20">
+                            <rect width="20" height="20" style="fill: rgba(150, 0, 255, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
+                        </svg>
+                        <span id = "front_right_side_mirror">front_right_side_mirror</span>
+        
+                        <br><br>
+                        <svg width="20" height="20">
+                            <rect width="20" height="20" style="fill: rgba(0, 0, 0, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
+                        </svg>                   
+                        <span id = "front_left_headlight">front_left_headlight</span>
+        
+                        <br><br>
+                        
+                        <svg width="20" height="20">
+                            <rect width="20" height="20" style="fill: rgba(255, 225, 0, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
+                        </svg>
+                        <span id = "front_left_side_mirror">front_left_side_mirror</span>
+        
+                        <br><br>
+                        <svg width="20" height="20">
+                            <rect width="20" height="20" style="fill: rgba(0, 255, 0, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
+                        </svg>
+                        <span id = "car_license_plate">car_license_plate</span>
+        
+                </div></div>
             </div>
-        <div>
-                <br><br>
-
-                    <svg width="20" height="20">
-                        <rect width="20" height="20" style="fill: rgba(0, 0, 255, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
-                    </svg>
-                    <span id = front_bumper>front_bumper</span>
-
-                    <br><br>
-
-                    <svg width="20" height="20">
-                        <rect width="20" height="20" style="fill: rgba(255, 0, 0, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
-                    </svg>
-                    <span id = front_bonnet>front_bonnet</span>
-                    
-                    <br><br>
-
-                    <svg width="20" height="20">
-                        <rect width="20" height="20" style="fill: rgba(255, 0, 255, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
-                    </svg>
-                    <span id = front_right_headlight>front_right_headlight</span>
-
-                    <br><br>
-                    <svg width="20" height="20">
-                        <rect width="20" height="20" style="fill: rgba(150, 0, 255, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
-                    </svg>
-                    <span id = front_right_side_mirror>front_right_side_mirror</span>
-
-                    <br><br>
-                    <svg width="20" height="20">
-                        <rect width="20" height="20" style="fill: rgba(0, 0, 0, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
-                    </svg>                   
-                    <span id = front_left_headlight>front_left_headlight</span>
-
-                    <br><br>
-                    
-                    <svg width="20" height="20">
-                        <rect width="20" height="20" style="fill: rgba(255, 225, 0, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
-                    </svg>
-                    <span id = front_left_side_mirror>front_left_side_mirror</span>
-
-                    <br><br>
-                    <svg width="20" height="20">
-                        <rect width="20" height="20" style="fill: rgba(0, 255, 0, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
-                    </svg>
-                    <span id = "car_license_plate">car_license_plate</span>
-
-            </div>
+        
             <li>Start annotating in the test image below by selecting the correct object class in the drop down menu (front_bumper etc) and press <strong>Left Click</strong> to start annotation.</li>
-            <li>Press <strong>CTRL+Click</strong> or <strong>Right Click</strong> to close the polygon and finish your annotation for that object.</li>
+            <i>အောက်မှာပြထားတဲ့ ကားပုံကို စပြီး annotate လုပ်ဖို့ drop down menu ထဲက object ကိုရွေးပါ။ ပြီးနောက် Left Click နှိပ်ပြီး စ annotate လုပ်ပါ။</i>
+            <li>Press <strong>CTRL+Click</strong> or <strong>Right Click</strong> to close the polygon and finish your annotation for that object. </li>
+            <i><strong>CTRL+Click </strong>(သို့) <strong>Right Click</strong>နှိပ်ပြီး annotation ပိတ်ပါ။ (အရောင််ခြယ်ထားတဲ့ polygon တွေ့ရပါလိမ့်မယ်)</i> 
             <li>Once you have completed all annotations for the 7 object classes, please download the image using the <strong>Download Button</strong>.</li>
-            <li>Please upload the saved image to the google form. (You do not need to change the image filename)</li>
-            
+            <i>Object ၇ခုလုံး annotate ပြီးသွားရင် <strong>Download </strong>ကိုနှိပ်ပြီး ဒေါင်းလုတ် လုပ်ပါ။</i>
+            <li>Please upload the saved image to the google form. (You do not need to change the image filename). </li>
+            <i>ပုံကို Google ဖောင်မှာ တင်ပါ။ (ပုံနာမည်ပြောင်းရန်မလိုပါ)</i>
+            <li>Please see video instructions:</li>
+            <iframe width="1000" height="600" src="https://www.youtube.com/embed/RtgRBGhLOjw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </ol>
+
     </p>
 
+    
     <hr size="8" width="100%" color="orange"> 
 
     <body onload="clear_canvas()">
-        <h2>
+        <h2 style="color:orangered;">
             Test Image:
         </h2>
-        <p>Please Annotate the following image below and download the image using the button below.</p>
+        <p>Please annotate all 7 objects in the following image below and download the image using the button below. 
+            <br>
+            <i>ဒေါင်းလုတ် မလုပ်ခင် နာမည်ပါအောင် ထည့်ပေးပါ၊</i>
+
+        </p>
+        
         <div style="float:left">
             <canvas id="jPolygon" width="1056" height="594" style="cursor:crosshair" data-imgsrc="test_image.jpg" onmousedown="point_it(event)" oncontextmenu="return false;">
                 Your browser does not support the HTML5 canvas tag.
             </canvas>
             <div>
-                <p>Please enter and submit your name before downloading the completed annotated image.</p>
+                <p>Before downloading the completed annotated image: </p>
+                <li>Please enter and submit your name. </li>
+                <li>Please make sure all 7 objects are annotated. </li>
+               
                 <h2>
-                    Download completed annotated image here: <span><button onclick="download_image()">Download Image</button></span>
+                    Download your completed annotated image: <span><button id = "button" onclick="download_image()" >Download Image</button></span>
                 </h2>
-                
+
+                <p style="color:orangered;">After downloading your complete annotated image, please upload the image to the google form.</p>
                 
             </div>
             
         </div>
         <div style="float:left; margin-left:20px;">
             <div>
-                <button onclick="undo()">Undo Annotation</button>
-                <button onclick="clear_canvas()">Clear All Annotations</button>
+                <button id = "button" onclick="undo()">Undo Annotation</button>
+                <button id = "button" onclick="clear_canvas()">Clear All Annotations</button>
                 <p>Press <strong>Left Click</strong> to draw a point.</p>
                 <p><strong>CTRL+Click</strong> or <strong>Right Click</strong> to close the polygon.</p>
-                <form name="form1" id="form1" action="/action_page.php">
-                    Select Object Class: <select name="cat" id="cat">
+                <img src="https://www.freeiconspng.com/uploads/left-click-icon-13.png" width="350" alt="Vector Mouse Left Click Icon" /></a>
+                
+                
+                <form name="form1" id="form1" action="/action_page.php" >
+                    
+                    <strong style="color:orangered;">Select Object Class: </strong>
+                    <select name="cat" id="cat">
                     <option value="ID007" selected="selected">car_license_plate</option>
                       <option value="ID006" selected="selected">front_left_side_mirror</option>
                       <option value="ID004" selected="selected">front_left_headlight</option>
@@ -142,46 +194,47 @@
                     <svg width="20" height="20">
                         <rect width="20" height="20" style="fill: rgba(0, 0, 255, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
                     </svg>
-                    <span id = front_bumper>front_bumper</span>
+                    <span id = 'front bumper'>front_bumper</span>
+                    
 
                     <br><br>
 
                     <svg width="20" height="20">
                         <rect width="20" height="20" style="fill: rgba(255, 0, 0, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
                     </svg>
-                    <span id = front_bonnet>front_bonnet</span>
+                    <span id = "front bonnet">front_bonnet</span>
                     
                     <br><br>
 
                     <svg width="20" height="20">
                         <rect width="20" height="20" style="fill: rgba(255, 0, 255, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
                     </svg>
-                    <span id = front_right_headlight>front_right_headlight</span>
+                    <span id = "front right headlight">front_right_headlight</span>
 
                     <br><br>
                     <svg width="20" height="20">
                         <rect width="20" height="20" style="fill: rgba(150, 0, 255, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
                     </svg>
-                    <span id = front_right_side_mirror>front_right_side_mirror</span>
+                    <span id = "front right side mirror">front_right_side_mirror</span>
 
                     <br><br>
                     <svg width="20" height="20">
                         <rect width="20" height="20" style="fill: rgba(0, 0, 0, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
                     </svg>                   
-                    <span id = front_left_headlight>front_left_headlight</span>
+                    <span id = "front left headlight">front_left_headlight</span>
 
                     <br><br>
                     
                     <svg width="20" height="20">
                         <rect width="20" height="20" style="fill: rgba(255, 225, 0, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
                     </svg>
-                    <span id = front_left_side_mirror>front_left_side_mirror</span>
+                    <span id = "front left side mirror">front_left_side_mirror</span>
 
                     <br><br>
                     <svg width="20" height="20">
                         <rect width="20" height="20" style="fill: rgba(0, 255, 0, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
                     </svg>
-                    <span id = "car_license_plate">car_license_plate</span>
+                    <span id = "car license plate">car_license_plate</span>
 
                   </form>
                   
@@ -195,6 +248,7 @@
             
         </div>
         <script type="text/javascript" src="jPolygon.js"></script>
+
     </body>
 </html>
 
