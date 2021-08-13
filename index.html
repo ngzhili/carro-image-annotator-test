@@ -24,6 +24,7 @@
     </h1>
 
     <p>Please enter your name and press submit</p>
+    <i>ကျေးဇူးပြု၍ သင်၏အမည်ကိုရိုက်ထည့်ပြီး submit ကိုနှိပ်ပါ</i>
     <h2> 
         <form id="form" onsubmit="return false;">
             
@@ -33,6 +34,7 @@
         </form>
 
     </h2>
+    <i>နာမည်အပြည့်အစုံရေးပါ</i>
 
     <!--<h2> 
         <form id="form" onsubmit="return false;">
@@ -57,11 +59,12 @@
     <h2 style="color:orangered;">
         Instructions:
     </h2>
+    <p style="color:orangered;">ညွှန်ကြားချက်မျာ</p>
     <p>
         <ol >
             <li>Please enter and submit your name if you have not done so above. </li>
             <i>နာမည်ဖြည့်ပြီး Submit နှိပ်ပါ။</i>
-            <li>Your task is to annotate the test image correctly using the correct object labels.</li>
+            <li>Your task is to annotate the test image correctly using the correct object labels according to their respective colours.</li>
             <i>လုပ်ရမှာက ပုံရဲ့ အရာဝတ္ထု နဲ့ သူနဲ့ သက်ဆိုင်တဲ့ စာနဲ့ အရောင် ကို annotate လုပ်ပေးရမှာပါ။</i>
             <li>In the left image, we can see a front view image of a car, while in the right image, we have an annotated image of the same car. There are a total of 7 objects to be annotated in the front_panel of the car. </li>
             <i>ဒါက annotate လုပ်ရမယ့် ကားရဲ့ရှေ့မျက်နှာစာ နမူနာပုံ ပါ။ ကားမျက်နှာစာမှာ စုစုပေါင်း annotate လုပ်ရမယ့်  အရာဝတ္ထု ၇ ခုရှိတယ်။</i>
@@ -74,7 +77,9 @@
                 </div>
                 <div class="right"><div>
                     <br><br>
-        
+                    <h2 style="color:orangered;">
+                        Object Classes:
+                    </h2>
                         <svg width="20" height="20">
                             <rect width="20" height="20" style="fill: rgba(0, 0, 255, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
                         </svg>
@@ -131,6 +136,8 @@
             <li>Please upload the saved image to the google form. (You do not need to change the image filename). </li>
             <i>ပုံကို Google ဖောင်မှာ တင်ပါ။ (ပုံနာမည်ပြောင်းရန်မလိုပါ)</i>
             <li>Please see video instructions:</li>
+            <i>ကျေးဇူးပြု၍ ဗီဒီယိုညွှန်ကြားချက်များကိုကြည့်ပါ။</i>
+            <br>
              <iframe width="1056" height="594" src="https://www.youtube.com/embed/Te6dl3okQpQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </ol>
 
@@ -155,15 +162,20 @@
             </canvas>
             <div>
                 <p>Before downloading the completed annotated image: </p>
+                <i>ပြီးစီးခဲ့သောမှတ်ပုံတင်ကိုမဒေါင်းလုပ်ချမီ</i>
                 <li>Please enter and submit your name. </li>
+                <i>ကျေးဇူးပြု၍ သင်၏အမည်ကိုရိုက်ထည့်ပြီးတင်ပြပါ။</i>
                 <li>Please make sure all 7 objects are annotated. </li>
-               
+                <i>ကျေးဇူးပြု၍ အရာဝတ္ထု ၇ ခုစလုံးကိုအမှတ်အသားပြုပါ။</i>
+
+
                 <h2>
                     Download your completed annotated image: <span><button id = "button" onclick="download_image()" >Download Image</button></span>
                 </h2>
+                <i>သင်ပြီးစီးခဲ့သောမှတ်ပုံတင်ကို download လုပ်ပါ။</i>
 
                 <p style="color:orangered;">After downloading your complete annotated image, please upload the image to the google form.</p>
-                
+                <i style="color:orangered;">သင်၏ပြီးပြည့်စုံသောမှတ်စာပုံကိုဒေါင်းလုပ်ဆွဲပြီးနောက် ကျေးဇူးပြု၍ ပုံကို google form သို့တင်ပါ။</i>
             </div>
             
         </div>
@@ -172,13 +184,17 @@
                 <button id = "button" onclick="undo()">Undo Annotation</button>
                 <button id = "button" onclick="clear_canvas()">Clear All Annotations</button>
                 <p>Press <strong>Left Click</strong> to draw a point.</p>
+                <i>အမှတ်တစ်ခုရယူရန်ဘယ်ဘက်ကလစ်နှိပ်ပါ။</i>
                 <p><strong>CTRL+Click</strong> or <strong>Right Click</strong> to close the polygon.</p>
+                <i>ပုံသဏ္ဌာန်ကိုပိတ်ရန် CTRL+Click (သို့) Right Click နှိပ်ပါ</i>
+                <br>
                 <img src="https://www.freeiconspng.com/uploads/left-click-icon-13.png" width="350" alt="Vector Mouse Left Click Icon" /></a>
                 
                 
                 <form name="form1" id="form1" action="/action_page.php" >
                     
                     <strong style="color:orangered;">Select Object Class: </strong>
+
                     <select name="cat" id="cat">
                     <option value="ID007" selected="selected">car_license_plate</option>
                       <option value="ID006" selected="selected">front_left_side_mirror</option>
@@ -189,9 +205,12 @@
                       <option value="ID001" selected="selected">front_bumper</option>
                       
                     </select>
+
+                    
                     
                     <br><br>
-
+                    <strong style="color:orangered;">Object Class ကိုရွေးပါ။</strong>
+                    <br><br>
                     <svg width="20" height="20">
                         <rect width="20" height="20" style="fill: rgba(0, 0, 255, 0.5);stroke-width:3;stroke:rgb(0,0,0)" />
                     </svg>
