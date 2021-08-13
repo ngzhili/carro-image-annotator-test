@@ -52,8 +52,10 @@ form {
   .container { 
     
     display:inline-block; 
+
     
-    margin-right:10px; 
+
+    
     padding:0; 
 }
 
@@ -74,4 +76,8 @@ form {
     vertical-align:middle; 
     
     padding:0 10px; 
+}
+
+#form1{
+  background:rgb(225, 225, 226);
 }
